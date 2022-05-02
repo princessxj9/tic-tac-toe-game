@@ -1,4 +1,6 @@
 # tic-tac-toe-game
+/////////////////////// GAME RULES ///////////////////////////
+
 // Tic Tac Toe is played on a grid that is 3 squares by 3 squares.
 
 // One player would be 'X' an another player wouold be 'O'. 
