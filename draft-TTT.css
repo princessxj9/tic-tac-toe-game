@@ -17,12 +17,3 @@ body {
 
 
 
-.tile {
-    width: 147px;
-    height: 147px;
-      /*text*/
-    font-size: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
