@@ -1,28 +1,42 @@
-body {
+body{
     font-family: sans-serif;
     text-align: center;
 }
 
-#board {
-    width: 450px;
-    height: 450px;
+.container{
+    background:  rgb(73, 68, 68) ;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+}
 
-    /*to see the box*/
-    background-color: navy;
+#button{
+    background: wheat;
+    font-family: sans-serif;
+    border-radius: 12px;  
+}
 
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
+#button:hover {
+    background: rgb(148, 129, 95);
+}
 
-
-
-.tile {
-    width: 147px;
-    height: 147px;
-      /*text*/
-    font-size: 150px;
-    display: flex;
+.board{
+    background: rgb(179, 174, 174);
+    display: grid;
     justify-content: center;
-    align-items: center;
-} 
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.cell {
+  background-color: rgb(73, 68, 68);
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.cell:hover {
+    background-color: rgb(201, 194, 194); 
+}
+
