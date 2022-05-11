@@ -1,3 +1,5 @@
+
+
 const cell = Array.from(document.getElementsByClassName('cell'));
 console.log(cell);
 
@@ -20,6 +22,7 @@ function checkForWinner(){
     winCombos.forEach(function(combination){
         let check = combination.every(cell => cell.innerText == currPlayer)
         if(check){
+    //changes Title when player wins 
            gameTitle = `${currPlayer} won the game!`
         }
       })
@@ -31,6 +34,7 @@ cell.forEach(function(cell, index){
         if(cell.innerText != ""){
             return
         }
+    //switch between x and o 
         cell.innerText = currPlayer; 
         if (currPlayer == playerX){
             currPlayer = playerO
