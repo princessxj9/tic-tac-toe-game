@@ -5,17 +5,7 @@ const playerX ='X';
 const playerO = 'O';
 var currPlayer = playerX; 
 
-/*const pos0 = cell[0]
-const pos1 = cell[1]
-const pos2 = cell[2]
-const pos3 = cell[3]
-const pos4 = cell[4]
-const pos5 = cell[5]
-const pos6 = cell[6]
-const pos7 = cell[7]
-const pos8 = cell[8]*/
-
-let winCombos = [
+const winCombos = [
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -30,13 +20,14 @@ function checkForWinner(){
     winCombos.forEach(function(combination){
         let check = combination.every(cell => cell.innerText == currPlayer)
         if(check){
-            alert(currPlayer + " has won")
+           gameTitle = `${currPlayer} won the game!`
         }
       })
 }
 
-cell.forEach(function(cell){
+cell.forEach(function(cell, index){
     cell.addEventListener('click', function(){
+        console.log(index)
         if(cell.innerText != ""){
             return
         }
@@ -46,13 +37,12 @@ cell.forEach(function(cell){
         } else {
            currPlayer = playerX
         }
-        console.log(checkForWinner());
+        checkForWinner()
     })
 })
 
 
-
-
+//// reset button
 cell.forEach(function(cell){
 var button = document.getElementById('button');
 button.addEventListener('click', function(){
@@ -62,8 +52,23 @@ button.addEventListener('click', function(){
 
 
 
+/*const id = e.target.id
+        if(!cells[id]){
+            cells[id] = currPlayer
+            e.target.innerText = currPlayer
+        }
 
-/*
+
+function checkForWinner(){
+  if((cells[0] == cells[1] == cells[2]) || (cells[3] == cells[4] == cells[5]) || (cells[6] == cells[7] == cells[8])
+  || (cells[0] == cells[4] == cells[8]) || (cells[2] == cells[4] == cells[6]) || (cells[2] == cells[5] == cells[8]
+  || (cells[1] == cells[4] == cells[7])|| (cells[0] == cells[3] == cells[6]))){
+         console.log('winner')
+      }
+}*/
+
+/* 
+
        //vertically
  if((pos0!= " ") && (pos0 == pos1) && (pos1 == pos2)){
     console.log("winner")
